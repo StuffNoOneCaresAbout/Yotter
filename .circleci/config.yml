@@ -8,9 +8,8 @@ jobs:
     executor: python/default
     steps:
       - checkout
-      - python/install-packages
-         pkg-manager: pip
-      # TODO: Tests
+      - python/install-packages:
+          pkg-manager: pip
 
 workflows:
   main:
