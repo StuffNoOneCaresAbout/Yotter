@@ -18,7 +18,7 @@ jobs:
           USERNAME: ${{ secrets.DOCKER_USERNAME }}
           PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
         run: | 
-          docker login -p $PASSWORD -u $USERNAME
+          echo $PASSWORD | docker login --password-stdin -u $USERNAME
       - name: cache docker cache
         uses: actions/cache@v1
         with: 
