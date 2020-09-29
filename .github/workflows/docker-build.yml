@@ -1,7 +1,9 @@
 name: Docker Multi-Architecture Build
 
 on:
-  push: {}
+  push:
+    paths:
+    - '**.md'
 
 jobs:
   build-docker:
