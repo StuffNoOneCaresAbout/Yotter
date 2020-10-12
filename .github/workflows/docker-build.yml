@@ -27,7 +27,7 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: cache docker cache
-        uses: actions/cache@v2.1.1
+        uses: actions/cache@v2.1.2
         with:
           path: ${{ github.workspace }}/cache
           key: ${{ runner.os }}-docker-${{ hashFiles('**/requirements.txt') }}
